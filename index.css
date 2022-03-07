@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+      font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100vw;
+  height: 100vh
+    color: white;
+    background: linear-gradient(to left , #753a88,#cc2b5e);
+}
+h1{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2%;
+    margin-bottom: -6%;
+    color: white;
+    /* transform: skew(100deg); */
+}
+h2{
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(60px);
+    transition: all .3s ease-in;
+}
+h6{
+    font-size: 10px;
+    text-align: center;
+}
+.carousel{
+    overflow: visible;
+}
+.carousel .carousel-item{
+    width: 400px;
+}
+.carousel .carousel-item:hover h2{
+  visibility: visible;
+  transform: translateY(0px);
+}
+.carousel-item img{
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0.5);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+.accounts{
+    text-align: center;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+
+}
+.icon{
+    height: 30px;
+    margin: 0px;
+    padding-left: 10px;
+    transition-duration: 0.2s;
+}
+.whatsapp,.gmail,.github,.linkedin{
+    opacity: 0;
+    margin-top: 0px;
+    animation: come 0.5s 1s 1 forwards;
+    /* animation-delay: 1s; */
+}
+@keyframes come{
+    from{
+        margin-top: 0px;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    to{
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
+.github:hover{
+    filter: invert(0.0);
+    transform: scale(1.2);
+}
+.icon:hover{
+    transform: scale(1.2);
+}
